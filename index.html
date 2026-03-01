@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional - Mukti Adriansyah</title>
+    
+    <!-- Framework & Animasi -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Menggunakan Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --bg-dark: #0f172a;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: #f8fafc;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #818cf8, #c084fc, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Timeline Connector */
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 11px;
+            width: 20px;
+            height: 20px;
+            background: var(--bg-dark);
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .contact-card:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--primary);
+            transform: translateY(-10px);
+        }
+
+        .image-glow {
+            box-shadow: 0 0 50px -12px rgba(99, 102, 241, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass px-6 py-3 transition-all duration-300" id="nav-container">
+            <div class="text-xl font-bold tracking-tighter text-gradient">PORTFOLIO.</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-indigo-400 transition">Beranda</a>
+                <a href="#about" class="hover:text-indigo-400 transition">Tentang</a>
+                <a href="#education" class="hover:text-indigo-400 transition">Pendidikan</a>
+                <a href="#contact" class="hover:text-indigo-400 transition">Kontak</a>
+            </div>
+            <button class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-full text-sm transition">
+                Download CV
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Halo, Saya <br><span class="text-gradient">Mukti Adriansyah</span>
+                </h1>
+                <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                    Saya adalah seorang mahasiswa yang memiliki kemampuan luar biasa dalam menunda tugas dengan penuh percaya diri. Ahli dalam seni berhemat di akhir bulan dengan menu andalan mi instan, sambil tetap bermimpi jadi orang sukses yang suatu hari nanti bisa traktir teman tanpa cek saldo dulu.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="bg-white text-slate-900 px-8 py-4 rounded-2xl font-bold hover:bg-slate-200 transition">Mulai Hubungi</a>
+                    <a href="#education" class="glass px-8 py-4 rounded-2xl font-bold hover:bg-white/5 transition">Riwayat Pendidikan</a>
+                </div>
+            </div>
+            <div class="flex justify-center" data-aos="zoom-in">
+                <div class="floating relative">
+                    <div class="absolute -inset-4 bg-indigo-500/20 blur-2xl rounded-full"></div>
+                    <!-- Placeholder image digunakan karena path lokal tidak bisa diakses publik -->
+                    <img src="WhatsApp Image 2026-02-26 at 12.45.42.jpeg" 
+                         class="relative w-72 h-96 object-cover rounded-[40px] border-2 border-white/10 shadow-2xl image-glow" alt="Profil Mukti">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 glass p-8 md:p-12" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold mb-8 text-gradient">Data Pribadi</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-12">
+                        <div>
+                            <p class="text-slate-500 text-xs uppercase tracking-widest mb-1">Tempat, Tanggal Lahir</p>
+                            <p class="font-medium text-lg text-slate-200">Subang, 29 April 2007</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-xs uppercase tracking-widest mb-1">Jenis Kelamin</p>
+                            <p class="font-medium text-lg text-slate-200">Laki-laki</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-xs uppercase tracking-widest mb-1">Kewarganegaraan</p>
+                            <p class="font-medium text-lg text-slate-200">Republik Indonesia</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-xs uppercase tracking-widest mb-1">Status</p>
+                            <p class="font-medium text-lg text-slate-200">Pelajar / Mahasiswa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-8 flex flex-col justify-center border-l-4 border-indigo-500" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-map-marker-alt text-indigo-400 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2 text-white">Alamat</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Jl. Sawangan, Desa sawangan<br>
+                        Kec. Cipeundeuy, Kab. Subang,<br>
+                        Prov. Jawa Barat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section (Dahulu -> Sekarang) -->
+    <section id="education" class="py-24 px-6 bg-slate-900/30">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Riwayat Pendidikan</h2>
+                <p class="text-slate-400 italic">Perjalanan pendidikan dari awal hingga saat ini</p>
+            </div>
+            
+            <div class="relative ml-4 md:ml-0">
+                <div class="timeline-line hidden md:block md:left-1/2"></div>
+                <div class="timeline-line md:hidden"></div>
+
+                <!-- 1. SD (Awal) -->
+                <div class="relative mb-16 flex flex-col md:flex-row items-center justify-between" data-aos="fade-up">
+                    <div class="hidden md:block w-5/12 text-right">
+                        <span class="text-indigo-400 font-bold"></span>
+                    </div>
+                    <div class="timeline-dot md:left-1/2 md:-translate-x-1/2"></div>
+                    <div class="w-full md:w-5/12 glass p-6 border-l-4 border-slate-500">
+                        <span class="text-slate-500 font-bold text-sm">Pendidikan Dasar</span>
+                        <h3 class="text-xl font-bold text-white mt-1">SD Negeri Nugraha Pancasila</h3>
+                        <p class="text-slate-400 text-sm mt-2">Entah saya lupa lulus tahun berapa</p>
+                    </div>
+                </div>
+
+                <!-- 2. SMP -->
+                <div class="relative mb-16 flex flex-col md:flex-row-reverse items-center justify-between" data-aos="fade-up">
+                    <div class="hidden md:block w-5/12">
+                         <span class="text-indigo-400 font-bold"></span>
+                    </div>
+                    <div class="timeline-dot md:left-1/2 md:-translate-x-1/2"></div>
+                    <div class="w-full md:w-5/12 glass p-6 border-r-4 border-indigo-500/30">
+                        <span class="text-slate-500 font-bold text-sm">Menengah Pertama</span>
+                        <h3 class="text-xl font-bold text-white mt-1">SMP Negeri 2 Cipeundeuy</h3>
+                        <p class="text-slate-400 text-sm mt-2">Sama saya juga lupa lulus tahun berapa</p>
+                    </div>
+                </div>
+
+                <!-- 3. SMA -->
+                <div class="relative mb-16 flex flex-col md:flex-row items-center justify-between" data-aos="fade-up">
+                    <div class="hidden md:block w-5/12 text-right">
+                         <span class="text-indigo-400 font-bold"></span>
+                    </div>
+                    <div class="timeline-dot md:left-1/2 md:-translate-x-1/2"></div>
+                    <div class="w-full md:w-5/12 glass p-6 border-l-4 border-indigo-500/30">
+                        <span class="text-slate-500 font-bold text-sm">Menengah Atas</span>
+                        <h3 class="text-xl font-bold text-white mt-1">SMA Negeri 1 Cipeundeuy</h3>
+                        <p class="text-slate-400 text-sm italic">Dan ya seperti sebelumnya yang bapak/ibu ketahui saya juga lupa lulus tahun berapa</p>
+                    </div>
+                </div>
+
+                <!-- 4. Perguruan Tinggi (Sekarang) -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between" data-aos="fade-up">
+                    <div class="hidden md:block w-5/12">
+                         <span class="text-indigo-400 font-bold">.</span>
+                    </div>
+                    <div class="timeline-dot md:left-1/2 md:-translate-x-1/2"></div>
+                    <div class="w-full md:w-5/12 glass p-6 border-r-4 border-indigo-500">
+                        <span class="text-indigo-400 font-bold text-sm">Pendidikan Tinggi</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Universitas Pelita Bangsa</h3>
+                        <p class="text-slate-400 text-sm italic mb-3">Fakultas Teknik</p>
+                        <p class="text-slate-500 text-sm leading-relaxed">Nah ini saya barus ingat yaitu sekarang dan 6 semester kedepan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Mari Terhubung</h2>
+                <p class="text-slate-400">Silakan hubungi saya melalui platform berikut.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <a href="https://wa.me/6283148487216" target="_blank" class="glass p-6 flex flex-col items-center contact-card transition-all" data-aos="zoom-in">
+                    <i class="fab fa-whatsapp text-3xl text-green-500 mb-4"></i>
+                    <span class="text-sm font-bold">WhatsApp</span>
+                </a>
+                <a href="https://t.me/adriansyahmukti" target="_blank" class="glass p-6 flex flex-col items-center contact-card transition-all" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fab fa-telegram-plane text-3xl text-sky-400 mb-4"></i>
+                    <span class="text-sm font-bold">Telegram</span>
+                </a>
+                <a href="https://www.instagram.com/kutujaran_19" target="_blank" class="glass p-6 flex flex-col items-center contact-card transition-all" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fab fa-instagram text-3xl text-pink-500 mb-4"></i>
+                    <span class="text-sm font-bold">Instagram</span>
+                </a>
+                <a href="https://x.com/99Adriansy19244" target="_blank" class="glass p-6 flex flex-col items-center contact-card transition-all" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fa-brands fa-x-twitter text-3xl text-white mb-4"></i>
+                    <span class="text-sm font-bold">Twitter / X</span>
+                </a>
+                <a href="tel:+6285871253724" class="glass p-6 flex flex-col items-center contact-card transition-all" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-phone text-3xl text-indigo-400 mb-4"></i>
+                    <span class="text-sm font-bold">Telepon</span>
+                </a>
+                <a href="mailto:adriansyahmukti@gmail.com" class="glass p-6 flex flex-col items-center contact-card transition-all" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fas fa-envelope text-3xl text-rose-500 mb-4"></i>
+                    <span class="text-sm font-bold">Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-600 text-sm border-t border-white/5">
+        <p>© 2024 Portofolio Mukti Adriansyah. Built with Passion.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Smooth Scrolling with Offset
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 90,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('nav-container');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-slate-900/90', 'border-indigo-500/30');
+                nav.classList.remove('bg-white/5');
+            } else {
+                nav.classList.remove('bg-slate-900/90', 'border-indigo-500/30');
+                nav.classList.add('bg-white/5');
+            }
+        });
+    </script>
+</body>
+</html>
